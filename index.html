@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bigfund Admin Panel</title>
+<style>
+body {
+    background: #0f172a;
+    color: #fff;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 12px 20px;
+    margin: 10px;
+    background: #22c55e;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #16a34a;
+}
+
+#wallet, #status, #balance {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+</style>
+</head>
+<body>
+
+<h1>Bigfund Admin Panel</h1>
+
+<button id="connectBtn">Connect Wallet</button>
+<p id="wallet">Not Connected</p>
+<p id="status"></p>
+<p id="balance"></p>
+
+<button id="withdrawBtn">Withdraw Tax USDT</button>
+
+<!-- Load Ethers.js and Chart.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+
+<!-- Load app.js after libraries -->
+<script src="app.js" defer></script>
+
+</body>
+</html>
