@@ -1,0 +1,259 @@
+
+/* =====================================
+   BIGFUND ADMIN PANEL
+   Premium Gold + Dark Navy UI
+===================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0;
+    padding: 18px 14px 28px;
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at top,
+            #1c2a40 0%,
+            #101827 45%,
+            #080d17 100%
+        );
+
+    color: #f8fafc;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Admin heading */
+h1 {
+    width: 100%;
+    max-width: 600px;
+    margin: 18px auto 28px;
+    color: #f5cc72;
+    font-size: clamp(23px, 6vw, 34px);
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+    overflow-wrap: anywhere;
+
+    text-shadow: 0 2px 18px rgba(245, 204, 114, 0.12);
+}
+
+/* Connect and withdraw buttons */
+button {
+    display: block;
+    width: 100%;
+    max-width: 380px;
+    min-width: 0;
+    min-height: 48px;
+    margin: 14px auto;
+    padding: 13px 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 11px;
+
+    background: linear-gradient(
+        135deg,
+        #f3cf7a 0%,
+        #d9a83f 55%,
+        #b98224 100%
+    );
+
+    color: #172033;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.4;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: anywhere;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+
+    transition: transform 0.15s ease, filter 0.2s ease;
+}
+
+button:hover {
+    filter: brightness(1.08);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:focus-visible {
+    outline: 2px solid #f5cc72;
+    outline-offset: 3px;
+}
+
+/* Connect wallet button */
+#connectBtn {
+    background: linear-gradient(
+        135deg,
+        #f8dda0,
+        #e6b84f,
+        #c9912c
+    );
+}
+
+/* Withdraw button */
+#withdrawBtn {
+    background: linear-gradient(
+        135deg,
+        #34d399,
+        #10a66b,
+        #087f52
+    );
+    color: #ffffff;
+    border-color: rgba(110, 231, 183, 0.25);
+}
+
+/* Wallet, status and balance cards */
+#wallet,
+#status,
+#balance {
+    display: block;
+    width: 100%;
+    max-width: 620px;
+    min-width: 0;
+    margin: 12px auto;
+    padding: 13px;
+
+    border-radius: 11px;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+#wallet,
+#balance {
+    color: #e2e8f0;
+    background: linear-gradient(
+        145deg,
+        rgba(30, 41, 59, 0.98),
+        rgba(15, 23, 42, 0.98)
+    );
+
+    border: 1px solid rgba(245, 204, 114, 0.19);
+
+    box-shadow:
+        0 5px 16px rgba(0, 0, 0, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+/* Status message */
+#status {
+    color: #cbd5e1;
+    background: rgba(30, 41, 59, 0.55);
+    border: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+/* Links, if app.js inserts any */
+#status a,
+#wallet a,
+#balance a {
+    color: #f5cc72;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+/* Small mobile screens */
+@media (max-width: 360px) {
+    body {
+        padding: 10px 7px 20px;
+    }
+
+    h1 {
+        margin: 12px auto 20px;
+        font-size: 22px;
+        letter-spacing: -0.3px;
+    }
+
+    button {
+        width: 100%;
+        max-width: 100%;
+        min-height: 44px;
+        margin: 10px auto;
+        padding: 11px 9px;
+        border-radius: 9px;
+        font-size: 14px;
+    }
+
+    #wallet,
+    #status,
+    #balance {
+        margin: 9px auto;
+        padding: 10px 8px;
+        border-radius: 9px;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+}
+
+/* Standard mobile screens */
+@media (min-width: 361px) and (max-width: 480px) {
+    body {
+        padding: 13px 10px 22px;
+    }
+
+    h1 {
+        margin: 15px auto 23px;
+        font-size: 26px;
+    }
+
+    button {
+        max-width: 100%;
+    }
+}
+
+/* Tablet and desktop */
+@media (min-width: 768px) {
+    body {
+        padding: 24px;
+    }
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    button {
+        max-width: 360px;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    button {
+        transition: none;
+    }
+}
