@@ -65,8 +65,7 @@ document.getElementById("connectBtn").onclick = async function connectWallet(){
         contract = new ethers.Contract(contractAddress, abi, signer);
         token = new ethers.Contract(tokenAddress, tokenABI, signer);
 
-        const owner = await contract.owner();
-        updateStatus((user.toLowerCase() === owner.toLowerCase()) ? "✅ Owner Connected" : "⚠️ Not Owner");
+    
 
         await updateBalance();
     }catch(e){
