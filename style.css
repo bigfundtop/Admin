@@ -257,3 +257,19 @@ button:focus-visible {
         transition: none;
     }
 }
+
+
+
+
+
+/* IMPORTANT: Make balance number GREEN */
+#balance .amount,
+#balance .balance-amount {
+    color: #00ff66 !important;
+    font-weight: 800 !important;
+}
+
+/* Keep balance card text normal colour */
+#balance {
+    color: #e2e8f0;
+}
