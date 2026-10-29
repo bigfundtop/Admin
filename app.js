@@ -15,19 +15,22 @@ const tokenABI = [
 ];
 
 // ==================== HELPERS ====================
-function updateStatus(text){
+
+function updateStatus(text) {
     document.getElementById("status").innerHTML = text;
 }
 
-async function updateBalance(){
-    if(!contract) return;
+async function updateBalance() {
+    if (!contract) return;
 
     const bal = await contract.taxPoolUSDT();
     const formatted = ethers.utils.formatUnits(bal, 6);
 
-    document.getElementById("balance").innerText =
-        "Contract Tax Pool Balance: " + formatted + " USDT";
+    document.getElementById("balance").innerHTML =
+        'Contract Tax Pool Balance: <span class="amount">' +
+        formatted + ' USDT</span>';
 }
+
 
 // ==================== HANDLE TRANSACTION ====================
 async function handleTx(tx){
